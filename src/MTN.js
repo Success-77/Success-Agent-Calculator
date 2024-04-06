@@ -118,25 +118,6 @@ const MTN = () => {
             </p>
           );
         })}
-        <h5>AT</h5>
-        {packages.map((pack, index) => {
-          const packLen = pack.length;
-          const priceLen = String(prices[index]).length;
-          const indexLen = String(index + 1).length;
-          const totalLen = 20;
-          const dotsLen = totalLen - (packLen + priceLen + indexLen + 5); // 5 is the number of additional characters including dots, spaces, and indexes
-
-          let dots = "";
-          for (let i = 0; i < dotsLen; i++) {
-            dots += ".";
-          }
-
-          return (
-            <p key={index}>
-              {index + 1}. {pack} {dots} {prices[index]}
-            </p>
-          );
-        })}
         <p className="totalAmt">
           Total: GH&#8373;{prices.reduce((acc, cur) => acc + cur, 0).toFixed(2)}
         </p>
