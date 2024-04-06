@@ -11,7 +11,7 @@ function amounts(dictionary, packages) {
 const MTN = () => {
   const initialAgentPrices = useMemo(
     () => ({
-      1: 5.3,
+      1: 5.7,
       2: 9.5,
       3: 14,
       4: 17.5,
@@ -99,6 +99,26 @@ const MTN = () => {
           <span>Packs</span>
           <span>Prices</span>
         </h4>
+        <h5>MTN</h5>
+        {packages.map((pack, index) => {
+          const packLen = pack.length;
+          const priceLen = String(prices[index]).length;
+          const indexLen = String(index + 1).length;
+          const totalLen = 20;
+          const dotsLen = totalLen - (packLen + priceLen + indexLen + 5); // 5 is the number of additional characters including dots, spaces, and indexes
+
+          let dots = "";
+          for (let i = 0; i < dotsLen; i++) {
+            dots += ".";
+          }
+
+          return (
+            <p key={index}>
+              {index + 1}. {pack} {dots} {prices[index]}
+            </p>
+          );
+        })}
+        <h5>AT</h5>
         {packages.map((pack, index) => {
           const packLen = pack.length;
           const priceLen = String(prices[index]).length;
