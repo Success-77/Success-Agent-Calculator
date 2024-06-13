@@ -123,7 +123,8 @@ const Calculator = ({ initialAgentPrices, network }) => {
 
   function plainTextFormat(packages, prices) {
     const output = [];
-    output.push("\n*PACKS*\t\t*PRICES*");
+    output.push(`*${network}*\n`);
+    output.push("*PACKS*\t\t*PRICES*");
 
     const copiedPrices = prices.slice();
 
