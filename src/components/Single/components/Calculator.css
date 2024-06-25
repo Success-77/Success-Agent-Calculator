@@ -73,17 +73,6 @@
   margin: 1rem auto;
 }
 
-.sub-header {
-  font-weight: 900;
-  font-size: large;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  margin: 0 auto;
-}
-
 .guide {
   text-align: left;
   font-family: "Montserrat", sans-serif;

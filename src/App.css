@@ -62,7 +62,7 @@
 
   .tab-clicked {
     margin: 0 auto;
-    transition: margin 2s ease-in-out;
+    /* transition: margin 2s ease-in-out; */
   }
 
   .active {
