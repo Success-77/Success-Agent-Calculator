@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import copyIcon from "../../../assets/images/copy.png";
 import "./PaymentDetails.css";
 
-const PaymentDetails = ({ serverDetails, isCopied, copyMomoNumber }) => {
+const PaymentDetails = ({ serverDetails }) => {
+  const [isCopied, setIsCopied] = useState(false);
   const phoneNumberHashing = (phone) => {
     return `+233*******${phone.slice(-2)}`;
+  };
+
+  const copyMomoNumber = () => {
+    navigator.clipboard
+      .writeText(serverDetails.number)
+      .then(() => {
+        setIsCopied(true);
+        setTimeout(() => {
+          setIsCopied(false);
+        }, 1500);
+      })
+      .catch((err) => console.error("Copy failed!", err));
   };
 
   return (
@@ -22,7 +35,7 @@ const PaymentDetails = ({ serverDetails, isCopied, copyMomoNumber }) => {
           <span>Copy</span>
         </button>
       )}
-      {isCopied && <p>Momo Number Copied!</p>}
+      {isCopied && <p className="copied">Momo Number Copied!</p>}
     </div>
   );
 };

@@ -65,6 +65,10 @@
   opacity: 0.6;
 }
 
+.copied {
+  text-align: center;
+  color: red;
+}
 .totalAmt {
   margin: 1rem auto;
 }

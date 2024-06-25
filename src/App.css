@@ -34,7 +34,7 @@
 .tab-clicked {
   height: 8rem; /* Initial height */
   margin: 0;
-  transition: height 0.5s ease-in-out, margin 0.5s ease-in-out; /* Smooth transition for height and margin */
+  transition: height 2s ease-in-out, margin 0.5s ease-in-out; /* Smooth transition for height and margin */
 }
 
 .move-tab-content {
@@ -62,7 +62,7 @@
 
   .tab-clicked {
     margin: 0 auto;
-    transition: margin 0.5s ease-in-out; /* Add transition for margin */
+    transition: margin 2s ease-in-out;
   }
 
   .active {
