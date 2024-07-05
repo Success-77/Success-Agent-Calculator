@@ -13,12 +13,7 @@ import {
   amounts,
   plainTextFormat,
 } from "../../shared/utilities/formatters";
-
-const serverDetails = {
-  number: "0249116309",
-  momoName: "Abdul Rahman Benyi",
-};
-
+import { serverDetails } from "../../shared/utilities/payment";
 const Calculator = ({ network }) => {
   const [inputValue, setInputValue] = useState("");
   const [inputError, setInputError] = useState("");
@@ -74,11 +69,7 @@ const Calculator = ({ network }) => {
       const values = inputValue.split("+").map((value) => value.trim());
       const packs = gigFormatter(values);
       const pricesArray = amounts(prices, values);
-      const plainTextLines = plainTextFormat(
-        packs,
-        pricesArray,
-        selectedNetwork
-      );
+      const plainTextLines = plainTextFormat(packs, pricesArray, serverDetails);
       const plainText = plainTextLines.join("\n");
 
       navigator.clipboard
