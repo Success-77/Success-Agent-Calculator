@@ -74,3 +74,5 @@ export const vodaPrices = {
   50: 210,
   100: 210 * 2,
 };
+
+export const afaPrice = 3.5;
