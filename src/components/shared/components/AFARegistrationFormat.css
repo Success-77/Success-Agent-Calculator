@@ -1,5 +1,5 @@
 .afa-format {
-  width: 18rem;
+  width: 50%;
   margin: 1rem auto;
 }
 
@@ -24,4 +24,10 @@
 
 .afa-format td {
   text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .afa-format {
+    width: 80%;
+  }
 }
