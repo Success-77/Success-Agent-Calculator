@@ -38,7 +38,7 @@ export const mtnPrices = {
   60: 210,
   70: 245,
   80: 280,
-  100: 350,
+  100: 370,
 };
 
 export const atPrices = {
